@@ -117,3 +117,70 @@ Before running the project, install:
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/your-username/lost-found-app.git
+2. Open Project
+
+Open in Visual Studio Code:
+File → Open Folder → select project
+
+3. Add Firebase Configuration
+
+In your index.html, add your Firebase config inside the module script.
+ const firebaseConfig = {
+            apiKey: "AIzaSyBIpaZ7-MAIm4M38e6looLn7QzSGRz7SVM",
+            authDomain: "lost-found-app-85f1a.firebaseapp.com",
+            projectId: "lost-found-app-85f1a",
+            storageBucket: "lost-found-app-85f1a.firebasestorage.app",
+            messagingSenderId: "838571741669",
+            appId: "1:838571741669:web:516aa5f205f945b3ab5f0c",
+            measurementId: "G-4BE8PQCK1Y"
+        };
+
+4. Run the Project
+
+Use Live Server (VS Code extension) or open:
+
+index.html
+Usage Instructions
+Open the website
+Report a lost or found item
+Upload an image and description
+Browse items in the grid
+Search or filter items
+Click “Claim” to mark a lost item as found
+Project Structure
+lost-found-app/
+│
+├── index.html
+├── index.css
+├── index.js
+├── README.md
+Challenges & Solutions
+Challenge 1: Connecting Frontend to Backend
+
+The main challenge was integrating the frontend with Firebase. This was solved using Firebase SDK and Firestore functions.
+
+Challenge 2: Real-time Data Updates
+
+Ensuring items updated instantly across the UI required reloading data after every database change.
+
+Challenge 3: Image Upload Handling
+
+Handling images required converting uploads into base64 format for storage inside Firestore.
+
+Challenge 4: Claim System Logic
+
+Making sure items could be marked as claimed required updating Firestore documents and refreshing the UI.
+
+Future Improvements
+Add user authentication (login system)
+Move images to Firebase Storage (better performance)
+Add admin dashboard
+Add notifications for claimed items
+Improve UI animations
+Deploy website publicly
+Add user profiles for claims
+GitHub Repository
+https://github.com/your-username/lost-found-app
+Author
+
+Created by: Anoushka Mody
